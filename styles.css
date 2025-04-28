@@ -453,7 +453,7 @@ span {
 }
 
 /* Telas muito pequenas (smartphones menores) */
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
     main {
         overflow: auto;
     }
@@ -497,83 +497,82 @@ span {
 
     }
 
+}
 
+/* Estilo padrão pode ficar como está */
 
-    /* Estilo padrão pode ficar como está */
+/* Estilo customizado ativado quando .card.custom-mode estiver presente */
+.card.custom-mode {
+    background-color: var(--primary);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 10px 10px 50px #10144ade;
+    color: white;
+}
 
-    /* Estilo customizado ativado quando .card.custom-mode estiver presente */
-    .card.custom-mode {
-        background-color: var(--primary);
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 10px 10px 50px #10144ade;
-        color: white;
-    }
+/* Labels no modo custom */
+.card.custom-mode label,
+.card.custom-mode legend {
+    color: white;
+    font-size: 0.95rem;
+}
 
-    /* Labels no modo custom */
-    .card.custom-mode label,
-    .card.custom-mode legend {
-        color: white;
-        font-size: 0.95rem;
-    }
+/* Inputs no modo custom */
+.card.custom-mode input[type="text"],
+.card.custom-mode input[type="email"],
+.card.custom-mode input[type="password"],
+.card.custom-mode input[type="date"],
+.card.custom-mode input[type="radio"] {
+    background-color: rgba(71, 71, 71, 0.673);
+    color: #eee;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
 
-    /* Inputs no modo custom */
-    .card.custom-mode input[type="text"],
-    .card.custom-mode input[type="email"],
-    .card.custom-mode input[type="password"],
-    .card.custom-mode input[type="date"],
-    .card.custom-mode input[type="radio"] {
-        background-color: rgba(71, 71, 71, 0.673);
-        color: #eee;
-        border: 1px solid white;
-        padding: 0.5rem;
-        border-radius: 5px;
-    }
+/* Botões no modo custom */
+.card.custom-mode .btn {
+    background-color: white;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-    /* Botões no modo custom */
-    .card.custom-mode .btn {
-        background-color: white;
-        color: #000;
-        font-weight: bold;
-        border: none;
-        padding: 0.6rem 1rem;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: 0.3s;
-    }
+.card.custom-mode .btn:hover {
+    background-color: rgba(71, 71, 71, 0.673);
+    color: white;
+}
 
-    .card.custom-mode .btn:hover {
-        background-color: rgba(71, 71, 71, 0.673);
-        color: white;
-    }
+/* Links no modo custom */
+.card.custom-mode .alternative a {
+    color: white;
+    text-decoration: underline;
+}
 
-    /* Links no modo custom */
-    .card.custom-mode .alternative a {
-        color: white;
-        text-decoration: underline;
-    }
+/* Abas no modo custom */
+.card.custom-mode .tab {
+    background-color: #2b2b2b;
+    color: white;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
 
-    /* Abas no modo custom */
-    .card.custom-mode .tab {
-        background-color: #2b2b2b;
-        color: white;
-        border-bottom: 2px solid transparent;
-        cursor: pointer;
-    }
+.card.custom-mode .tab.active {
+    background-color: white;
+    color: #000;
+    font-weight: bold;
+}
 
-    .card.custom-mode .tab.active {
-        background-color: white;
-        color: #000;
-        font-weight: bold;
-    }
+.card.custom-mode fieldset {
+    border-color: rgba(255, 255, 255, 0.233);
+}
 
-    .card.custom-mode fieldset {
-        border-color: rgba(255, 255, 255, 0.233);
-    }
-
-    fieldset label {
-        padding-left: 10px;
-        padding-bottom: 10px;
-        display: block;
-    }
+fieldset label {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    display: block;
 }
