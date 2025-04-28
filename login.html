@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="principal.html">
+                <img src="images/LogoIcone.png" alt="Ícone da Marca" class="logo-icone" />
+                <img src="images/logo.png" alt="Logo Completa" class="logo-img">
+            </a>
+        </div>
+        <div id="user-info" class="user-info">
+            <span id="user-status">Usuário não autenticado</span>
+            <div class="user-icon">
+                <img src="images/user_default.png" alt="Usuário" id="user-icon" class="user-icon-img">
+            </div>
+            <ul class="dropdown-menu" id="dropdown-menu">
+                <li id="logout-btn">Sair</li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="card">
+            <div class="tabs">
+                <div class="tab active">Cadastrar</div>
+                <div class="tab">Entrar</div>
+            </div>
+
+            <form id="cadastro-form" style="display:block;">
+                <div class="form-group">
+                    <label for="cadastro-nome">Nome:</label>
+                    <input type="text" id="cadastro-nome" name="cadastro-nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="cadastro-email">E-mail:</label>
+                    <input type="email" id="cadastro-email" name="cadastro-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="cadastro-senha">Senha:</label>
+                    <input type="password" id="cadastro-senha" name="cadastro-senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="cadastro-telefone">Telefone:</label>
+                    <input type="text" id="cadastro-telefone" name="cadastro-telefone">
+                </div>
+                <div class="form-group">
+                    <label for="data-nascimento">Data de Nascimento:</label>
+                    <input type="date" id="data-nascimento" name="data-nascimento">
+                </div>
+                <fieldset class="form-group">
+                    <legend>Estilo de Exibição:</legend>
+                    <label><input id="default-option" type="radio" name="estilo" value="default" checked>
+                        Default</label>
+                    <label><input id="custom-option" type="radio" name="estilo" value="custom"> Custom</label>
+                </fieldset>
+                <button type="submit" class="btn btn-submit">Cadastrar</button>
+                <div class="alternative">
+                    Já tem conta? <a href="#" id="link-entrar">Entre aqui</a>
+                </div>
+            </form>
+
+            <form id="login-form" style="display:none;">
+                <div class="form-group">
+                    <label for="login-email">E-mail</label>
+                    <input type="text" id="login-email" name="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-senha">Senha</label>
+                    <input type="password" id="login-senha" name="login-senha" required>
+                </div>
+                <button type="submit" class="btn">Entrar</button>
+                <div class="alternative">
+                    Novo por aqui? <a href="#" id="link-cadastrar">Cadastre-se</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2025.</p>
+        <p>Samuel Jose Candido e Maria Luysa de Souza</p>
+    </footer>
+</body>
+
+</html>
