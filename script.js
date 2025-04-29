@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Verificação para redirecionar para 404 se a página não for encontrada
     const validPages = [
-        'principal.html',
+        'index.html',
         'usuarioNaoIdentificado.html',
         'login.html',
         '404.html',
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Redirecionamento se não autenticado
-    if (!usuario && window.location.pathname.endsWith('principal.html')) {
+    if (!usuario && window.location.pathname.endsWith('index.html')) {
         window.location.href = 'usuarioNaoIdentificado.html';
         return;
     }
@@ -111,7 +111,7 @@ function configurarFormularioLogin() {
         const senha = document.getElementById('login-senha').value.trim();
         if (!login || !senha) return alert('Os campos Login e Senha devem estar preenchidos!');
         localStorage.setItem('usuario', login);
-        window.location.href = 'principal.html';
+        window.location.href = 'index.html';
     });
 }
 
@@ -125,7 +125,7 @@ function configurarFormularioCadastro() {
         if (!nome || !email || !senha) return alert('Todos os campos devem estar preenchidos!');
         localStorage.setItem('usuario', email);
         alert('Cadastro realizado com sucesso!');
-        window.location.href = 'principal.html';
+        window.location.href = 'index.html';
     });
 }
 
