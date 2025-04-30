@@ -143,10 +143,6 @@ body {
     margin-top: -70px;
 }
 
-.services-list {
-    margin-bottom: 50px;
-}
-
 .service-item h2 {
     margin-top: 30px;
     font-size: 1.7em;
@@ -170,14 +166,14 @@ body {
 }
 
 .card {
+    margin: 80px 0px 105px 0px;
     background: #fff;
     border-radius: 1rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
-    padding: 2rem;
-    max-height: 90vh;
-    overflow-y: auto;
+    padding: 30px;
+    max-height: 113vh;
     box-sizing: border-box;
 }
 
@@ -207,12 +203,6 @@ body {
 
 }
 
-.form-group label {
-    align-items: center;
-    gap: 8px;
-    /* espaço entre radio e texto */
-}
-
 .form-group input {
     width: 100%;
     max-width: 500px;
@@ -220,6 +210,25 @@ body {
     border: 1px solid #D1D5DB;
     border-radius: 0.5rem;
     font-size: 0.95rem;
+}
+
+.label-radio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    width: 120px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 400px;
+}
+
+#default-option ,#custom-option {
+    accent-color: var(--gray); /* ou qualquer cor */
+    max-width: 12px;
 }
 
 .btn {
@@ -506,7 +515,7 @@ span {
         margin-right: 0;
         margin-bottom: -70px;
     }
-    
+
     .about-section,
     .services-section,
     .contact-section {
@@ -548,6 +557,23 @@ span {
         font-size: 0.8em;
     }
 
+    .card {
+        margin-top: 120px;
+    }
+
+    .tab.active,
+    .tab {
+        font-size: 1em;
+    }
+
+    .card label,
+    #cadastro-form input[type="text"],
+    #cadastro-form input[type="email"],
+    #cadastro-form input[type="password"],
+    #cadastro-form input[type="date"] {
+        font-size: 0.8em;
+    }
+
     .pDeslogado {
         font-size: 0.8em;
     }
@@ -558,7 +584,7 @@ span {
 /* Estilo customizado ativado quando .card.custom-mode estiver presente */
 .card.custom-mode {
     background-color: var(--primary);
-    padding: 1.5rem;
+    padding: 1.5rem;    
     border-radius: 10px;
     box-shadow: 10px 10px 50px #10144ade;
     color: white;
@@ -568,7 +594,6 @@ span {
 .card.custom-mode label,
 .card.custom-mode legend {
     color: white;
-    font-size: 0.95rem;
 }
 
 /* Inputs no modo custom */
@@ -609,7 +634,7 @@ span {
 
 /* Abas no modo custom */
 .card.custom-mode .tab {
-    background-color: #2b2b2b;
+    background-color: #2b2b2bbf;
     color: white;
     border-bottom: 2px solid transparent;
     cursor: pointer;
